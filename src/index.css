@@ -18,5 +18,17 @@ body {
   font-weight: 700;
   padding: 8px 22px;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
+}
+.secondary-bg {
+  background-color: #f1e8ea;
+}
+.custom-h {
+  height: 100vh;
+}
+.custom-slide-h {
+  height: 800px;
+}
+.custom-slide-w {
+  width: 620px;
 }
