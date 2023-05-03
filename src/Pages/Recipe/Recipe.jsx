@@ -13,7 +13,7 @@ const Recipe = ({ recipe }) => {
   } = recipe;
 
   const handleFavBtn = () => {
-    toast.success("Favorite recipe");
+    toast.success("Added to Favorite");
     setFavourte(true);
   };
   return (

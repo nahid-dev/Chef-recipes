@@ -165,8 +165,8 @@ const Home = () => {
         </Swiper>
       </div>
       {/* Some top Chef here */}
-      <div>
-        <div className="section-header">
+      <div className="my-10">
+        <div className="section-header mb-10">
           <div className="main-container">
             <div className="grid grid-cols-1 text-center">
               <div>

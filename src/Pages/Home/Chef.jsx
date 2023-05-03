@@ -23,7 +23,7 @@ const Chef = ({ chef }) => {
             <p>Experience: {Years_of_experience}</p>
             <div className="flex items-center">
               <p>{Numbers_of_recipes}</p>
-              <p className="flex items-center">
+              <p className="flex items-center justify-end">
                 {" "}
                 <FaThumbsUp></FaThumbsUp> {likes}
               </p>
