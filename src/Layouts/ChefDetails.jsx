@@ -3,6 +3,7 @@ import Header from "../Pages/Shared/Header/Header";
 import Footer from "../Pages/Shared/Footer/Footer";
 import { useLoaderData } from "react-router-dom";
 import { FaThumbsUp } from "react-icons/fa";
+import Recipe from "../Pages/Recipe/Recipe";
 
 const ChefDetails = () => {
   const chefDetails = useLoaderData();
@@ -14,8 +15,8 @@ const ChefDetails = () => {
     Numbers_of_recipes,
     likes,
     Years_of_experience,
+    Recipes,
   } = chefDetails;
-  console.log(chefDetails);
   return (
     <>
       <Header></Header>
@@ -30,6 +31,7 @@ const ChefDetails = () => {
           </div>
         </div>
       </div>
+      {/* Chef Details */}
       <div className="secondary-bg pt-14">
         <div className="main-container">
           <div className="chef-banner third-bg">
@@ -72,6 +74,16 @@ const ChefDetails = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      {/* Chef Recipes */}
+      <div className="secondary-bg py-20">
+        <div className="main-container">
+          <div className="grid grid-cols-3">
+            {Recipes.map((recipe) => (
+              <Recipe key={recipe.recipe_name} recipe={recipe}></Recipe>
+            ))}
           </div>
         </div>
       </div>
