@@ -11,7 +11,6 @@ const Chef = ({ chef }) => {
     Years_of_experience,
     likes,
   } = chef;
-  console.log(chef.Number_of_recipes);
   return (
     <>
       <div className="">

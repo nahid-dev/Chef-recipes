@@ -23,6 +23,9 @@ body {
 .secondary-bg {
   background-color: #f1e8ea;
 }
+.third-bg {
+  background-color: #e9c9cd;
+}
 .custom-h {
   height: 100vh;
 }
@@ -31,4 +34,13 @@ body {
 }
 .custom-slide-w {
   width: 620px;
+}
+.chef-banner-h {
+  height: 16rem;
+}
+.chef-h {
+  height: 700px;
+}
+.likes-color {
+  color: #ad192a;
 }
