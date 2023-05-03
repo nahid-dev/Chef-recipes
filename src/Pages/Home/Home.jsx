@@ -9,9 +9,11 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
+import Chef from "./Chef";
 
 const Home = () => {
+  const chefData = useLoaderData();
   return (
     <>
       {/* Banner Slider */}
@@ -161,6 +163,29 @@ const Home = () => {
             </div>
           </SwiperSlide>
         </Swiper>
+      </div>
+      {/* Some top Chef here */}
+      <div>
+        <div className="section-header">
+          <div className="main-container">
+            <div className="grid grid-cols-1 text-center">
+              <div>
+                <h2 className="text-5xl font-bold mb-2">Our Top Chef's</h2>
+                <p className="text-gray-500">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Doloremque, aperiam.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="main-content main-container">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {chefData.map((chef) => (
+              <Chef key={chef.id} chef={chef}></Chef>
+            ))}
+          </div>
+        </div>
       </div>
     </>
   );
