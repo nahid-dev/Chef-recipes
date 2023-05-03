@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../../Providers/AuthProviders";
 
 const Header = () => {
+  const { user } = useContext(AuthContext);
+  console.log(user);
   return (
     <div>
       <div className="navbar main-container   absolute top-5 left-0 right-0 p-0">
