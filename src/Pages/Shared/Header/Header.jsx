@@ -17,7 +17,7 @@ const Header = () => {
         </div>
         <div className="navbar-center">
           <div className="space-x-3">
-            <NavLink>Home</NavLink>
+            <NavLink to="/">Home</NavLink>
             <NavLink>Blog</NavLink>
           </div>
         </div>

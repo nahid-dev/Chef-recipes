@@ -9,7 +9,6 @@ const ChefDetails = () => {
   const chefDetails = useLoaderData();
   const {
     Chef_name,
-    recipe_picture,
     Chef_picture,
     Chef_description,
     Numbers_of_recipes,
@@ -43,14 +42,14 @@ const ChefDetails = () => {
                       <img
                         className="chef-h w-full"
                         src={Chef_picture}
-                        alt=""
+                        alt="Chef Picture"
                       />
                     </div>
                   </div>
                 </div>
                 <div className="col-span-3 flex items-center">
                   <div className="p-10 ">
-                    <div>
+                    <div className="space-y-4">
                       <div className="badge badge-secondary badge-outline">
                         {Numbers_of_recipes}
                       </div>
@@ -80,7 +79,7 @@ const ChefDetails = () => {
       {/* Chef Recipes */}
       <div className="secondary-bg py-20">
         <div className="main-container">
-          <div className="grid grid-cols-3">
+          <div className="grid grid-cols-3 gap-5">
             {Recipes.map((recipe) => (
               <Recipe key={recipe.recipe_name} recipe={recipe}></Recipe>
             ))}

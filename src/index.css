@@ -44,3 +44,12 @@ body {
 .likes-color {
   color: #ad192a;
 }
+.recipe-img-h {
+  height: 256px;
+  width: 100%;
+}
+.favourite-btn {
+  border: 1px solid #ad192a;
+  padding: 5px 12px !important;
+  border-radius: 4px;
+}
