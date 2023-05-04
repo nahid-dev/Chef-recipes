@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <>
       {/* Banner Slider */}
-      <div className=" custom-h flex items-center">
+      <div className=" custom-h md:flex items-center hidden">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -33,7 +33,7 @@ const Home = () => {
           }}
           navigation={false}
           modules={[Autoplay, Pagination, Navigation]}
-          className="mySwiper"
+          className="mySwiper "
         >
           <SwiperSlide>
             <div className="grid grid-cols-2 main-container ">
@@ -166,6 +166,39 @@ const Home = () => {
           </SwiperSlide>
         </Swiper>
       </div>
+      {/* Mobile Device only */}
+      <div className="my-10 mt-20 md:hidden">
+        <div className="grid grid-cols-1 main-container ">
+          <div className="slider-content h-full flex items-center p-5">
+            <div className="space-y-4">
+              <h1 className="font-extrabold text-4xl">
+                Find Japanese Best Traditional Food Here.
+              </h1>
+              <p>
+                served with various toppings such as raw fish, seafood, and
+                vegetables. Another popular dish is tempura, which consists of
+                battered and deep-fried seafood or vegetables. Ramen, a type of
+                noodle soup, is also a beloved dish in Japan and has gained
+                popularity worldwide.
+              </p>
+              <div>
+                <Link>
+                  <button className="main-btn">See More</button>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="slider-image custom-slide-h w-full p-5">
+            <div className="h-5/6">
+              <img
+                className="h-full rounded-s-full custom-slide-w"
+                src={`https://images.unsplash.com/photo-1436327266874-c2e4e1ac7a97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80`}
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
       {/* Traditional Recipes */}
       <Tabs></Tabs>
       {/* Some top Chef here */}
@@ -184,7 +217,7 @@ const Home = () => {
           </div>
         </div>
         <div className="main-content main-container">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-5 md:px-0">
             {chefData.map((chef) => (
               <Chef key={chef.id} chef={chef}></Chef>
             ))}

@@ -37,12 +37,12 @@ const ChefDetails = () => {
         </div>
       </div>
       {/* Chef Details */}
-      <div className="secondary-bg pt-14">
+      <div className="secondary-bg pt-14 px-5 md:px-0">
         <div className="main-container">
           <div className="chef-banner third-bg">
             <div className="chef-banner-content">
               <div className="grid grid-cols-5 gap-10">
-                <div className="col-span-2">
+                <div className="col-span-5 md:col-span-2">
                   <div>
                     <div className="chef-image">
                       <img
@@ -53,7 +53,7 @@ const ChefDetails = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-span-3 flex items-center">
+                <div className="md:col-span-3 col-span-5 flex items-center">
                   <div className="p-10 ">
                     <div className="space-y-4">
                       <div className="badge badge-secondary badge-outline">
@@ -85,7 +85,7 @@ const ChefDetails = () => {
       {/* Chef Recipes */}
       <div className="secondary-bg py-20">
         <div className="main-container">
-          <div className="grid grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 px-5 md:px-0">
             {Recipes.map((recipe) => (
               <Recipe key={recipe.recipe_name} recipe={recipe}></Recipe>
             ))}

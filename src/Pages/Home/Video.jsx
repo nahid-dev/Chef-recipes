@@ -5,7 +5,7 @@ const Video = () => {
   return (
     <>
       <div className="main-container ">
-        <div className="grid grid-cols-1 md:grid-cols-2 my-10 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 my-10 gap-10 px-5 md:px-0">
           <div className="flex items-center">
             <div className="space-y-5">
               <h5 className="text-4xl font-extrabold">
