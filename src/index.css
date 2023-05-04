@@ -53,3 +53,9 @@ body {
   padding: 5px 12px !important;
   border-radius: 4px;
 }
+.active {
+  @apply font-medium tracking-wide text-red-700 transition-colors duration-200 hover:text-red-700;
+}
+.default {
+  @apply font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-red-700;
+}

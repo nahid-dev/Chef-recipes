@@ -19,8 +19,18 @@ const Header = () => {
         </div>
         <div className="navbar-center">
           <div className="space-x-3">
-            <NavLink to="/">Home</NavLink>
-            <NavLink>Blog</NavLink>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "active" : "default:")}
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/blog"
+              className={({ isActive }) => (isActive ? "active" : "default:")}
+            >
+              Blog
+            </NavLink>
           </div>
         </div>
         <div className="navbar-end space-x-3">

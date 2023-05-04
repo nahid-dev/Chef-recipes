@@ -6,6 +6,7 @@ import LoginAndReg from "../Layouts/LoginAndReg";
 import Login from "../Pages/LoginAndRegister/Login";
 import Register from "../Pages/LoginAndRegister/Register";
 import ErrorPage from "../Pages/Errorpage/ErrorPage";
+import Blog from "../Pages/Blog/Blog";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
         element: <Home></Home>,
         loader: () =>
           fetch("https://ass-10-server-nahid-dev.vercel.app/chefData"),
+      },
+      {
+        path: "blog",
+        element: <Blog></Blog>,
       },
     ],
   },
