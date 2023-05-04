@@ -11,8 +11,8 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import { Link, useLoaderData } from "react-router-dom";
 import Chef from "./Chef";
-import Tabs from "./Tabs";
 import Video from "./Video";
+import Tabs from "./Tabs";
 
 const Home = () => {
   const chefData = useLoaderData();
@@ -166,7 +166,7 @@ const Home = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-      {/* tab area */}
+      {/* Traditional Recipes */}
       <Tabs></Tabs>
       {/* Some top Chef here */}
       <div className="my-10 mb-20">

@@ -7,6 +7,7 @@ import Login from "../Pages/LoginAndRegister/Login";
 import Register from "../Pages/LoginAndRegister/Register";
 import ErrorPage from "../Pages/Errorpage/ErrorPage";
 import Blog from "../Pages/Blog/Blog";
+import PrivetRoutes from "./PrivetRoutes";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,11 @@ const router = createBrowserRouter([
   {
     path: "chefData/:id",
     errorElement: <ErrorPage></ErrorPage>,
-    element: <ChefDetails></ChefDetails>,
+    element: (
+      <PrivetRoutes>
+        <ChefDetails></ChefDetails>
+      </PrivetRoutes>
+    ),
     loader: ({ params }) =>
       fetch(`https://ass-10-server-nahid-dev.vercel.app/chefData/${params.id}`),
   },

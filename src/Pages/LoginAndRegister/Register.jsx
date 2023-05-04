@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
 import { toast } from "react-hot-toast";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
   const [error, setError] = useState("");
@@ -27,9 +28,24 @@ const Register = () => {
         form.reset();
         setError("");
         toast.success("registered successfully");
+        updateUserData(result.user, name, photo);
       })
       .catch((err) => {
         console.log(err);
+        setError(err.message);
+      });
+  };
+
+  // Update user
+  const updateUserData = (user, name, photo) => {
+    updateProfile(user, {
+      displayName: name,
+      photoURL: photo,
+    })
+      .then(() => {
+        console.log("user name update");
+      })
+      .catch((err) => {
         setError(err.message);
       });
   };
@@ -67,7 +83,7 @@ const Register = () => {
           />
           <input
             className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded"
-            type="text"
+            type="url"
             placeholder="Photo URL"
             name="photo"
             required
