@@ -6,7 +6,7 @@ import { toast } from "react-hot-toast";
 
 const Login = () => {
   const [error, setError] = useState("");
-  const { loggedInUser, googleSignIn } = useContext(AuthContext);
+  const { loggedInUser, googleSignIn, gitHubSignIn } = useContext(AuthContext);
 
   const handleLoginBtn = (e) => {
     e.preventDefault();
@@ -39,6 +39,20 @@ const Login = () => {
       });
   };
 
+  const handleGitHubSignIn = () => {
+    gitHubSignIn()
+      .then((result) => {
+        const gitHublogin = result.user;
+        console.log(gitHublogin);
+        toast.success("Login successfully");
+        setError("");
+      })
+      .catch((err) => {
+        console.log(object);
+        setError(err.message);
+      });
+  };
+
   return (
     <>
       <section className="h-screen flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 mx-5 md:mx-0 md:my-0">
@@ -59,6 +73,7 @@ const Login = () => {
               <FaGoogle className="ms-2"></FaGoogle>
             </button>
             <button
+              onClick={handleGitHubSignIn}
               type="button"
               className="inlne-block mx-1 h-9 w-9 rounded-full bg-blue-600 hover:bg-blue-700 uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca]"
             >

@@ -1,11 +1,17 @@
 import React from "react";
 import Header from "../Pages/Shared/Header/Header";
 import Footer from "../Pages/Shared/Footer/Footer";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigation } from "react-router-dom";
 import { FaThumbsUp } from "react-icons/fa";
 import Recipe from "../Pages/Recipe/Recipe";
+import LoadingSpinner from "../Pages/LoadingSpinner/LoadingSpinner";
 
 const ChefDetails = () => {
+  // Spinner
+  const navigation = useNavigation();
+  if (navigation.state === "loading") {
+    return <LoadingSpinner></LoadingSpinner>;
+  }
   const chefDetails = useLoaderData();
   const {
     Chef_name,
