@@ -14,7 +14,7 @@ const Header = () => {
   };
   return (
     <div>
-      <div className="navbar main-container  absolute top-5 left-0 right-0 p-0 px-5 md:px-0">
+      <div className="navbar z-50 main-container  absolute top-5 left-0 right-0 p-0 px-5 md:px-0">
         <div className="navbar-start">
           <Link to="/">
             <p className="text-3xl md:text-4xl font-extrabold border-red-800 border">
