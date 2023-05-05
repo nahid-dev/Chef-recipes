@@ -27,7 +27,7 @@ const Blog = () => {
   return (
     <>
       <div className="secondary-bg pb-4">
-        <div className="main-container flex items-end justify-center chef-banner-h text-center">
+        <div className="main-container flex items-end justify-center chef-banner-h text-center px-5 md:px-0">
           <div>
             <h3 className="text-4xl font-extrabold">Food Blog</h3>
             <p className="text-gray-500">
@@ -39,7 +39,7 @@ const Blog = () => {
       </div>
       {/* Generate PDF */}
       <div className="main-container">
-        <div className="grid grid-cols-1 text-right my-10">
+        <div className="grid grid-cols-1 text-right my-10 px-5 md:px-0">
           <div>
             <button
               onClick={downloadPDF}
