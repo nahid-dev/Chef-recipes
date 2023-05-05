@@ -9,6 +9,9 @@ const Tabs = () => {
             <div className="card bg-base-100 shadow-xl">
               <figure className="w-full">
                 <img
+                  loading="lazy"
+                  width="300"
+                  height="300"
                   className="w-full h-full"
                   src="https://images.unsplash.com/photo-1618889482923-38250401a84e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
                 />
@@ -34,6 +37,9 @@ const Tabs = () => {
             <div className="card bg-base-100 shadow-xl">
               <figure className="w-full">
                 <img
+                  loading="lazy"
+                  width="300"
+                  height="300"
                   className="w-full h-full"
                   src="https://images.unsplash.com/photo-1591814468924-caf88d1232e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
                 />
@@ -59,6 +65,9 @@ const Tabs = () => {
             <div className="card bg-base-100 shadow-xl">
               <figure className="w-full">
                 <img
+                  loading="lazy"
+                  width="300"
+                  height="300"
                   className="w-full h-full"
                   src="https://images.unsplash.com/photo-1623341214825-9f4f963727da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
                 />

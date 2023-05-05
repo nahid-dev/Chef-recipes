@@ -1,12 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigation } from "react-router-dom";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 
 const Blog = () => {
+  const [loader, setLoader] = useState(false);
   const navigation = useNavigation();
   if (navigation.state === "loading") {
     return <LoadingSpinner></LoadingSpinner>;
   }
+
+  const downloadPDF = () => {
+    const capture = document.querySelector(".blog-area");
+    setLoader(true);
+    html2canvas(capture).then((canvas) => {
+      const imgData = canvas.toDataURL("img/png");
+      const doc = new jsPDF("p", "mm", "a4");
+      const componentWidth = doc.internal.pageSize.getWidth();
+      const componentHeight = doc.internal.pageSize.getHeight();
+      doc.addImage(imgData, "PNG", 0, 0, componentWidth, componentHeight);
+      setLoader(false);
+      doc.save("receipt.pdf");
+    });
+  };
   return (
     <>
       <div className="secondary-bg pb-4">
@@ -20,8 +37,22 @@ const Blog = () => {
           </div>
         </div>
       </div>
+      {/* Generate PDF */}
+      <div className="main-container">
+        <div className="grid grid-cols-1 text-right my-10">
+          <div>
+            <button
+              onClick={downloadPDF}
+              disabled={!(loader === false)}
+              className="logout-btn"
+            >
+              {loader ? <span>Downloading</span> : <span>Download</span>}
+            </button>
+          </div>
+        </div>
+      </div>
       {/* Blog content */}
-      <div className="my-20">
+      <div className="my-20 blog-area">
         <div className="main-container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div className=" p-5">

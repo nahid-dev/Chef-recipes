@@ -11,12 +11,20 @@ const Chef = ({ chef }) => {
     Years_of_experience,
     likes,
   } = chef;
+
   return (
     <>
       <div className="">
         <div className="card card-side bg-base-100 shadow-xl">
           <figure className="h-80 w-52">
-            <img className="h-full" src={Chef_picture} alt="Movie" />
+            <img
+              className="h-full"
+              src={Chef_picture}
+              alt="Movie"
+              loading="lazy"
+              width="300"
+              height="300"
+            />
           </figure>
           <div className="card-body p-2">
             <h2 className="card-title">{Chef_name}</h2>

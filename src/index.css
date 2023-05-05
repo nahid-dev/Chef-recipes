@@ -35,6 +35,11 @@ body {
 .custom-slide-w {
   width: 620px;
 }
+/* Slider Style========= */
+.swiper-horizontal {
+  height: 100vh;
+}
+
 .chef-banner-h {
   height: 16rem;
 }

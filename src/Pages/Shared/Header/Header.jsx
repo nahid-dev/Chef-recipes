@@ -50,7 +50,7 @@ const Header = () => {
                   className=" avatar"
                   title={user?.displayName}
                 >
-                  <div className="w-14 rounded-full">
+                  <div className="w-14 rounded-full cursor-pointer">
                     <img src={user?.photoURL} />
                   </div>
                 </label>
